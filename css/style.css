@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@500&family=Lato:wght@500&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    /* Cores de Fundo */
+    --background-color: #1d1d1d;
+    --background-color2: #5A5A5A;
+    --background-color3: #f7f7f7;
+    --background-color4: #f1efef;
+    --background-color5: #4a4a4a;
+    --background-color6: #f5f5f5;
+
+    /* Cores de Texto */
+    --corLetraBotao: #052151;
+    --corLetraBotaoHover: #061838;
+    --texto-cor: #000000;
+    --button-text-color: #ffffff;
+    --link: #333333;
+    --secondary-color: #f0f0f0;
+
+    /* Cores de Botão */
+    --corBotao: #3b82f6;
+    --corBordaBotao: #1340b3;
+    --botaoHover: #3170d7;
+    --button-color-jogar: #007bff;
+    --button-color-escolha: #144696;
+    --button-color-escolha-hover: #3267bd;
+    --button-color-escolha-borda: #041e42;
+
+    /* Cores de Inputs */
+    --corInput: #d6dad4;
+    --bordaInput: #9f9f9f;
+    --newCorInput: #c9c9c9;
+    --newBordaInput: #989898;
+    --corInputOld: #f1f1f1;
+
+    /* Borda */
+    --borda-section: #141414;
+    --borda-clara: #C0C0C0;
+    --borda-prata: #a8a8a8;
+
+    /* Outras Cores */
+    --card-pergunta-color: #206dea;
+    --black: #000000ce;
+    --white: #fff;
+
+    /* Fontes por seletor */
+    --font-h: 'Montserrat', sans-serif;
+    --weight-h: 700;
+
+    --font-p: 'Roboto', sans-serif;
+    --weight-p: 400;
+
+    --font-a: 'Poppins', sans-serif;
+    --weight-a: 500;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--background-color2);
+    padding: 15px;
+    min-height: 100vh;
+    color: var(--texto-cor);
+    font-family: var(--font-p);
+    font-weight: var(--weight-p);
+}
+
+/* Conteúdo geral */
+main {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Coluna lateral */
+.info {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--borda-clara);
+    border-radius: 5px;
+    padding: 10px;
+    width: 250px;
+    gap: 10px;
+    align-items: center;
+    background: var(--background-color5);
+    color: var(--white);
+    flex-shrink: 0;
+}
+
+.info img {
+    width: 150px;
+    height: 150px;
+    border-radius: 100px;
+    border: 2px solid var(--black);
+}
+
+.info hr {
+    border: 1px solid var(--borda-clara);
+    width: 100%;
+}
+
+.info div {
+    width: 100%;
+}
+
+.info div h4,
+.info div p,
+.info div a {
+    margin: 0 7px;
+    width: 100%;
+    word-break: keep-all;
+    word-wrap: break-word;
+    color: var(--texto-cor);
+}
+
+.info div div {
+    display: flex;
+    gap: 5px;
+    margin: 0 5px;
+}
+
+.info div div img {
+    width: 35px;
+    height: 35px;
+    margin: 5px 0;
+    border: none;
+}
+
+/* Conteúdo principal */
+.content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+    border: 1px solid var(--borda-prata);
+    border-radius: 5px;
+    padding: 15px;
+    background: var(--background-color6);
+    color: var(--texto-cor);
+}
+
+.content div p {
+    width: 98%;
+    word-break: keep-all;
+    word-wrap: break-word;
+}
+
+/* Projetos */
+.containerProject section {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.infoProject {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--borda-prata);
+    border-radius: 5px;
+    padding: 10px;
+    background: var(--background-color3);
+    gap: 10px;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
+.infoProject img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.fieldLink {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Tipografia */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-h);
+    font-weight: var(--weight-h);
+}
+
+body, p, span, div {
+    font-family: var(--font-p);
+    font-weight: var(--weight-p);
+}
+
+a, nav, .menu-item {
+    font-family: var(--font-a);
+    font-weight: var(--weight-a);
+    color: var(--link);
+    text-decoration: underline;
+}
