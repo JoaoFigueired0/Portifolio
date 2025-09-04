@@ -61,38 +61,50 @@
     box-sizing: border-box;
 }
 
+/* ====== ALTERADO ======
+Antes: body usava `flex-direction: row;`
+Agora: usei `flex-wrap: wrap;` → permite quebra natural sem precisar @media
+========================= */
 body {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap; /* 🔥 ajustado */
     background-color: var(--background-color2);
     padding: 15px;
+    gap: 15px; /* 🔥 adicionado espaçamento entre elementos */
     min-height: 100vh;
     color: var(--texto-cor);
     font-family: var(--font-p);
     font-weight: var(--weight-p);
 }
 
-/* Conteúdo geral */
+/* ====== ALTERADO ======
+Antes: flex-direction: row fixo
+Agora: flex-wrap → permite colunas quebrarem
+========================= */
 main {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap; /* 🔥 ajustado */
     gap: 20px;
     width: 100%;
 }
 
-/* Coluna lateral */
+/* Coluna lateral (sidebar) */
+/* ====== ALTERADO ======
+Antes: width: 250px fixo
+Agora: `flex: 1 1 clamp(200px, 25%, 300px);`
+→ mínimo 200px, máximo 300px, até 25% da largura
+========================= */
 .info {
     display: flex;
     flex-direction: column;
     border: 1px solid var(--borda-clara);
     border-radius: 5px;
     padding: 10px;
-    width: 250px;
+    flex: 1 1 clamp(200px, 25%, 300px); /* 🔥 ajustado */
     gap: 10px;
     align-items: center;
     background: var(--background-color5);
     color: var(--white);
-    flex-shrink: 0;
 }
 
 .info img {
@@ -135,10 +147,15 @@ main {
 }
 
 /* Conteúdo principal */
+/* ====== ALTERADO ======
+Antes: width: 100% fixo
+Agora: `flex: 3 1 500px;`
+→ ocupa mais espaço que a sidebar, mas encolhe até 500px
+========================= */
 .content {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    flex: 3 1 500px; /* 🔥 ajustado */
     gap: 20px;
     border: 1px solid var(--borda-prata);
     border-radius: 5px;
@@ -154,6 +171,9 @@ main {
 }
 
 /* Projetos */
+/* ====== MANTIDO ======
+Já estava responsivo com auto-fill + minmax
+========================= */
 .containerProject section {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -185,9 +205,21 @@ main {
 }
 
 /* Tipografia */
+/* ====== ALTERADO ======
+Antes: tamanhos fixos herdados
+Agora: usei clamp() para tamanhos fluidos
+========================= */
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-h);
     font-weight: var(--weight-h);
+}
+
+h1 {
+    font-size: clamp(1.5rem, 2vw, 3rem); /* 🔥 ajustado */
+}
+
+p {
+    font-size: clamp(0.9rem, 1vw, 1.2rem); /* 🔥 ajustado */
 }
 
 body, p, span, div {
