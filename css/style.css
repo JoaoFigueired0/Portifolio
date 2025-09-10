@@ -61,38 +61,38 @@
     box-sizing: border-box;
 }
 
+
 body {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap; 
     background-color: var(--background-color2);
     padding: 15px;
+    gap: 15px;
     min-height: 100vh;
     color: var(--texto-cor);
     font-family: var(--font-p);
     font-weight: var(--weight-p);
 }
 
-/* Conteúdo geral */
+
 main {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap; 
     gap: 20px;
     width: 100%;
 }
 
-/* Coluna lateral */
 .info {
     display: flex;
     flex-direction: column;
     border: 1px solid var(--borda-clara);
     border-radius: 5px;
-    padding: 10px;
-    width: 250px;
+    padding: 20px;
+    flex: 1 1 clamp(25px, 25%, 35px);
     gap: 10px;
     align-items: center;
     background: var(--background-color5);
     color: var(--white);
-    flex-shrink: 0;
 }
 
 .info img {
@@ -134,12 +134,11 @@ main {
     border: none;
 }
 
-/* Conteúdo principal */
 .content {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    gap: 20px;
+    flex: 3 1 500px;
+    gap: 25px;
     border: 1px solid var(--borda-prata);
     border-radius: 5px;
     padding: 15px;
@@ -153,7 +152,6 @@ main {
     word-wrap: break-word;
 }
 
-/* Projetos */
 .containerProject section {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -184,10 +182,18 @@ main {
     align-items: center;
 }
 
-/* Tipografia */
+
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-h);
     font-weight: var(--weight-h);
+}
+
+h1 {
+    font-size: clamp(1.5rem, 2vw, 3rem);
+}
+
+p {
+    font-size: clamp(0.9rem, 1vw, 1.2rem);
 }
 
 body, p, span, div {
