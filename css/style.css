@@ -56,11 +56,7 @@
 
 body {
     display: flex;
-<<<<<<< HEAD
-    flex-wrap: wrap; 
-=======
     flex-wrap: wrap;
->>>>>>> 90c9a8abd869d7aa24d7010112639c52250e2e39
     background-color: var(--background-color2);
     padding: 15px;
     gap: 15px;
@@ -72,11 +68,7 @@ body {
 
 main {
     display: flex;
-<<<<<<< HEAD
-    flex-wrap: wrap; 
-=======
     flex-wrap: wrap;
->>>>>>> 90c9a8abd869d7aa24d7010112639c52250e2e39
     gap: 20px;
     width: 100%;
 }
@@ -86,13 +78,8 @@ main {
     flex-direction: column;
     border: 1px solid var(--borda-clara);
     border-radius: 5px;
-<<<<<<< HEAD
-    padding: 10px;
-    flex: 0 1 clamp(200px, 25%, 300px); 
-=======
     padding: 20px;
-    flex: 1 1 clamp(25px, 25%, 35px);
->>>>>>> 90c9a8abd869d7aa24d7010112639c52250e2e39
+    flex: 0 1 clamp(200px, 25%, 300px);
     gap: 10px;
     align-items: center;
     background: var(--background-color5);
@@ -102,7 +89,7 @@ main {
 .info img {
     width: 150px;
     height: 150px;
-    border-radius: 100px;
+    border-radius: 50%;
     border: 2px solid var(--black);
 }
 
@@ -120,8 +107,7 @@ main {
 .info div a {
     margin: 0 7px;
     width: 100%;
-    word-break: keep-all;
-    word-wrap: break-word;
+    word-break: break-word;
     color: var(--texto-cor);
 }
 
@@ -141,11 +127,7 @@ main {
 .content {
     display: flex;
     flex-direction: column;
-<<<<<<< HEAD
-    flex: 3 1 500px; 
-=======
     flex: 3 1 500px;
->>>>>>> 90c9a8abd869d7aa24d7010112639c52250e2e39
     gap: 20px;
     border: 1px solid var(--borda-prata);
     border-radius: 5px;
@@ -156,8 +138,7 @@ main {
 
 .content div p {
     width: 98%;
-    word-break: keep-all;
-    word-wrap: break-word;
+    word-break: break-word;
 }
 
 .containerProject section {
@@ -175,8 +156,7 @@ main {
     padding: 10px;
     background: var(--background-color3);
     gap: 10px;
-    word-break: break-all;
-    word-wrap: break-word;
+    word-break: break-word;
 }
 
 .infoProject img {
@@ -190,35 +170,18 @@ main {
     align-items: center;
 }
 
-<<<<<<< HEAD
 h1, h2, h3, h4, h5, h6 {
-=======
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
     margin: 20px 0 0 0;
->>>>>>> 90c9a8abd869d7aa24d7010112639c52250e2e39
     font-family: var(--font-h);
     font-weight: var(--weight-h);
 }
 
 h1 {
-<<<<<<< HEAD
-    font-size: clamp(1.5rem, 2vw, 3rem); 
-}
-
-p {
-    font-size: clamp(0.9rem, 1vw, 1.2rem); 
-=======
     font-size: clamp(1.5rem, 2vw, 3rem);
 }
 
 p {
     font-size: clamp(0.9rem, 1vw, 1.2rem);
->>>>>>> 90c9a8abd869d7aa24d7010112639c52250e2e39
 }
 
 body,
